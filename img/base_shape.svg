@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1300" height="74" viewBox="0 0 1300 74">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="crop" width="1300" height="74" transform="translate(7 70.053)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="6.667" gradientTransform="translate(0.473 0.047) scale(0.053 0.906)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6636b2"/>
+      <stop offset="0.025" stop-color="#6637b2" stop-opacity="0.976"/>
+      <stop offset="0.383" stop-color="#7347b9" stop-opacity="0.635"/>
+      <stop offset="0.767" stop-color="#825bc0" stop-opacity="0.408"/>
+      <stop offset="1" stop-color="#8a65c4" stop-opacity="0.302"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" r="6.708" gradientTransform="translate(0.474 0.05) scale(0.053 0.901)" xlink:href="#radial-gradient"/>
+  </defs>
+  <g id="base_shape" transform="translate(-7 -70.053)" clip-path="url(#clip-path)">
+    <rect id="Прямоугольник_7" data-name="Прямоугольник 7" width="1300" height="67.093" transform="translate(-3.047 76.96)" fill="url(#radial-gradient)"/>
+    <rect id="Прямоугольник_8" data-name="Прямоугольник 8" width="1308.125" height="67.093" transform="translate(-7.109 70.053)" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>
