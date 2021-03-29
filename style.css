@@ -140,10 +140,72 @@ body {
 }
 
 
-
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    background-color: rgba(0,0,0,.5);
+}
+.modal_dialog {
+    max-width: 400px;
+    margin: 40px auto;
+}
+.modal_content {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 10px 10px 0 #594AAF;
+}
+.modal_title {
+    margin-bottom: 40px;
+    display: inline-block;
+    max-width: 300px;
+    text-align: right;
+    color: #594AAF;
+    font-size: 29px;
+}
+.modal_input {
+    display: block;
+    margin: 5px auto;
+    width: 240px;
+    border: none;
+    background-color: #E6E6E6;
+    font-weight: 300;
+    font-size: 20px;
+}
+.btn_input {
+    margin: 0 auto;
+    display: block;
+    width: 240px;
+    text-align: center;
+    height: 50px;
+    padding: 15px 65px;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(to top, #8A65C4 50%,#7959C0 50%);
+}
+.modal_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
 
 /* CONTENT */
 /* **************** */
+
+
 .content {
     position: relative;
     overflow: hidden;;
