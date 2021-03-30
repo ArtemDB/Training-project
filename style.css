@@ -252,6 +252,7 @@ body {
     margin: 27px 0;
     border-radius: 0 30% 30% 0;
     background: linear-gradient(to top, #8A65C4 50%,#7959C0 50%);
+    cursor: pointer;
 }
 
 .timer {
@@ -273,6 +274,7 @@ body {
 
 .persefona {
     position: absolute;
+    z-index: -1;
     top: 50%;
     right: 180px;
 }
