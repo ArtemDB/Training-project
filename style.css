@@ -59,10 +59,16 @@ body {
     padding: 26px 27px;
     justify-self: center;
     align-self: start;
+    cursor: pointer;
 }
 
 .active {
-    background-color: rgba(198, 156, 109, .3);
+    background-color: rgba(163, 116, 63, 0.3);
+}
+.active_over {
+    color: #dfa96c;
+    text-shadow: 0 0 10px #dd933e;
+    transition: all 0.4s linear;
 }
 
 
@@ -253,6 +259,11 @@ body {
     border-radius: 0 30% 30% 0;
     background: linear-gradient(to top, #8A65C4 50%,#7959C0 50%);
     cursor: pointer;
+}
+
+.btn_shadow {
+    box-shadow: 0 0 20px #8A65C4;
+    transition: all  0.4s linear;
 }
 
 .timer {
