@@ -47,7 +47,10 @@ body {
     color: #C69C6D;
     white-space: nowrap;
 }
-
+.for_logo {
+    position: relative;
+    z-index: 100;
+}
 .logo_brand {
     display: block;
     margin: 0 auto;
@@ -195,7 +198,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: white;
-    background: linear-gradient(to top, #8A65C4 50%,#7959C0 50%);
+    background: linear-gradient(to top, #8A65C4 50%,#7959c0 50%);
 }
 .modal_close {
     position: absolute;
@@ -210,8 +213,23 @@ body {
 
 /* CONTENT */
 /* **************** */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade{
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* About us */
 
-
+.about_us {
+    display: block;
+}
 .content {
     position: relative;
     overflow: hidden;;
@@ -288,4 +306,50 @@ body {
     z-index: -1;
     top: 50%;
     right: 180px;
+}
+
+/* Reviews */
+
+.reviews {
+    display: none;
+    margin: 0 auto;
+    min-height: 800px;
+    background: url(img/photo_back.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.reviews_title {
+    margin-right: 250px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: right;
+    color: #C69C6D;
+    font-size: 55px;
+    text-shadow: -4px -4px 0 #693dc7;
+}
+
+.review_block {
+    position: relative;
+    margin: 0 auto;
+    width: 720px;
+    height: 200px;
+}
+
+.review {
+    position: relative;
+    bottom: 180px;
+    margin: 5px auto;
+    width: 600px;
+    height: 160px;
+    background-color: rgba(74, 59, 163, 0.8);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+
+}
+
+.img_circle {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgba(127, 114, 199, 0.6);
+    border-radius: 100%;
+    overflow: visible;
 }

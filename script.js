@@ -1,5 +1,49 @@
 "use strict";
 window.addEventListener('DOMContentLoaded', () => {
+
+    // Navigation
+
+    const aboutUs = document.querySelector('.about_us'),
+          headerLink = document.querySelectorAll('.header_link'),
+          header = document.querySelector('.header'),
+          contentBlock = document.querySelectorAll('.content_block');
+
+    function addActive(e) {
+        e.classList.add('active');
+    }
+    function removeActive(e) {
+        e.classList.remove('active');
+    }
+    function hideBlockContent() {
+        contentBlock.forEach (e => {
+            e.style.display = 'none';
+            e.classList.remove('fade');
+        });
+        headerLink.forEach (e => {
+            removeActive(e);
+        });
+    }
+    function showBlockContent(i = 0) {
+        addActive(headerLink[i]);
+        contentBlock[i].style.display = 'block';
+        contentBlock[i].classList.add('fade');
+    }
+
+    hideBlockContent();
+    showBlockContent();
+
+    header.addEventListener ('click', (event) => {
+        const target = event.target;
+        if (target && target.classList.contains('header_link')) {
+            headerLink.forEach ((e, i) => {
+                if (target == e) {
+                    hideBlockContent();
+                    showBlockContent(i);
+                }
+            });
+        }
+    });
+
     // Timer
 
     const deadline = '2021-05-01';
@@ -82,11 +126,10 @@ window.addEventListener('DOMContentLoaded', () => {
             modalHide();
         }
     });
-    const modalTimer = setTimeout(modalShow, 10000);
+    // const modalTimer = setTimeout(modalShow, 10000);
 
     // Animation
 
-    const headerLink = document.querySelectorAll('.header_link');
     headerLink.forEach (e => {
         e.onmouseover = function(event) {
             event.target.classList.add('active_over');

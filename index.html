@@ -10,10 +10,12 @@
     <title>Юридическая фирма</title>
 </head>
 <body>
+        <!-- Navigation -->
+
     <div class="header_cont">
         <header class="header">
             <div class="header_link">О НАС</div>
-            <div class="header_link active">УСЛУГИ</div>
+            <div class="header_link">УСЛУГИ</div>
             <div class="for_logo">
                 <img src="img/logo.svg" alt="logo" no-repeat class="logo_brand">
             </div>
@@ -22,54 +24,68 @@
         </header>
     </div>
     <main class="content">
-        <div class="price_list">
-            <div class="logo_price">
-                ЮРИДИЧЕСКИЕ УСЛУГИ
-            </div>
-            <div class="price">
 
-            </div>
-            <div class="offer">
-                <div class="hot_offer">
-                    <p>ОСТАЛОСЬ ДО КОНЦА АКЦИИ:</p>
-                    <div class="timer">
-                        <div class="timer-block">
-                            <span id="days">24</span>ДНЕЙ
-                        </div>
-                        <div class="timer-block">
-                            <span id="hours">24</span>ЧАСОВ
-                        </div>
-                        <div class="timer-block">
-                            <span id="minutes">24</span>МИНУТ
-                        </div>
-                        <div class="timer-block">
-                            <span id="seconds">24</span>СЕКУНД
+        <!-- About us -->
+
+        <div class="content_block about_us">
+            <div class="price_list">
+                <div class="logo_price">
+                    ЮРИДИЧЕСКИЕ УСЛУГИ
+                </div>
+                <div class="price">
+
+                </div>
+                <div class="offer">
+                    <div class="hot_offer">
+                        <p>ОСТАЛОСЬ ДО КОНЦА АКЦИИ:</p>
+                        <div class="timer">
+                            <div class="timer-block">
+                                <span id="days">24</span>ДНЕЙ
+                            </div>
+                            <div class="timer-block">
+                                <span id="hours">24</span>ЧАСОВ
+                            </div>
+                            <div class="timer-block">
+                                <span id="minutes">24</span>МИНУТ
+                            </div>
+                            <div class="timer-block">
+                                <span id="seconds">24</span>СЕКУНД
+                            </div>
                         </div>
                     </div>
+                    <div class="btn btn_offer">
+                        ПРОКОНСУЛЬТИРОВАТЬСЯ БЕСПЛАТНО
+                    </div>
                 </div>
-                <div class="btn btn_offer">
-                    ПРОКОНСУЛЬТИРОВАТЬСЯ БЕСПЛАТНО
+            </div>
+            <img src="img/persefona.png" alt="persefona" class="persefona">
+
+            <!-- Modal -->
+
+            <div class="modal">
+                <div class="modal_dialog">
+                    <div class="modal_content">
+                        <form action="#">
+                            <div class="modal_close">&#10006</div>
+                            <div class="modal_title">ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</div>
+                            <input placeholder="Имя" name="name" type="text" class="modal_input">
+                            <input placeholder="Телефон" name="phone" type="phone" class="modal_input">
+                            <div class="btn_input">ОТПРАВИТЬ</div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <img src="img/persefona.png" alt="persefona" class="persefona">
 
-        <!-- Modal -->
+        <!-- Reviews -->
 
-        <div class="modal">
-            <div class="modal_dialog">
-                <div class="modal_content">
-                    <form action="#">
-                        <div class="modal_close">&#10006</div>
-                        <div class="modal_title">ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</div>
-                        <input placeholder="Имя" name="name" type="text" class="modal_input">
-                        <input placeholder="Телефон" name="phone" type="phone" class="modal_input">
-                        <div class="btn_input">ОТПРАВИТЬ</div>
-                    </form>
-                </div>
+        <div class="content_block reviews">
+            <div class="reviews_title">ОТЗЫВЫ</div>
+            <div class="review_block">
+                <div class="img_circle"></div>
+                <div class="review"></div>
             </div>
         </div>
-
     </main>
     <footer class="footer">
         <div class="contacts">
