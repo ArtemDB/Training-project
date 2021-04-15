@@ -333,6 +333,8 @@ body {
     margin: 0 auto;
     width: 720px;
     height: 200px;
+    color: white;
+    text-align: center;
 }
 
 .review {
@@ -352,4 +354,8 @@ body {
     border: 5px solid rgba(127, 114, 199, 0.6);
     border-radius: 100%;
     overflow: visible;
+}
+
+.review_text {
+    padding: 10px 70px;
 }

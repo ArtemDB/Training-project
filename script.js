@@ -146,5 +146,32 @@ window.addEventListener('DOMContentLoaded', () => {
         event.target.classList.remove('btn_shadow');
     };
 
-});
+    // Reviews
 
+    class Review {
+        constructor(title, text, parentSelector) {
+            this.title = title;
+            this.text = text;
+            this.parent = document.querySelector(parentSelector);
+        }
+
+        render() {
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <div class="review_block">
+                    <div class="img_circle"></div>
+                    <div class="review">
+                        <h3 class="review_title">${this.title}</h3>
+                        <div class="review_text">${this.text}</div>  
+                    </div>
+                </div>
+            `;
+            this.parent.append(element);
+        }
+    }
+    new Review(
+        'Заголовок скрипта',
+        'Текст скрипта',
+        '.reviews'
+    ).render();
+});
