@@ -126,7 +126,6 @@ window.addEventListener('DOMContentLoaded', () => {
             modalHide();
         }
     });
-    // const modalTimer = setTimeout(modalShow, 10000);
 
     // Animation
 
@@ -174,4 +173,56 @@ window.addEventListener('DOMContentLoaded', () => {
         'Текст скрипта',
         '.reviews'
     ).render();
+
+    // Forms
+
+    const modalForm = document.querySelector('form');
+
+    const message = {
+        loading: 'Загрузка',
+        success: 'Спасибо, мы скоро с вами свяжемся.',
+        failure: 'Возникла ошибка.'
+    };
+
+    postData(modalForm);
+
+    function postData(form) {
+        form.addEventListener ('submit', (e) =>{
+            e.preventDefault();
+
+            const statusMessage = document.createElement ('div');
+            statusMessage.classList.add('status_message');
+            statusMessage.textContent = message.loading;
+            form.append(statusMessage);
+
+            const reqst =new XMLHttpRequest();
+            reqst.open('POST', 'server.php');
+
+            reqst.setRequestHeader('Content-type', 'application/json');
+            const formData = new FormData(form);
+
+            const obj = {};
+
+            formData.forEach(function(value, key){
+                obj[key] = value;
+            });
+
+            const json = JSON.stringify(obj);
+
+            reqst.send(json);
+
+            reqst.addEventListener ('load', () => {
+                if (reqst.status === 200) {
+                    console.log(reqst.response);
+                    statusMessage.textContent = message.success;
+                    form.reset();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                    }, 2000);
+                } else {
+                    statusMessage.textContent = message.failure;
+                }
+            });
+        });
+    }
 });
