@@ -39,7 +39,7 @@ body {
 .relative_block {
     position: relative;
     z-index: 100;
-}
+} 
 
 .hide {
     display: none;
@@ -385,7 +385,6 @@ body {
 
 .services {
     position: relative;
-    z-index: -1;
     background: no-repeat url(img/ClipGroup.jpg);
     background-size: cover;
 }
@@ -429,13 +428,18 @@ body {
 }
 
 .services_item {
+    margin-bottom: 20px;
     width: 560px;
     padding: 8px;
     padding-left: 80px;
+    cursor: pointer;
 }
 
 .btn_services {
     grid-area: btn;
+    margin-right: 35px;
+    justify-self: end;
+    width: 290px;
     font-size: 30px;
     text-shadow: none;
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
@@ -460,6 +464,11 @@ body {
 .services_item_ul {
     margin-left: 100px;
     font-weight: 300;
+}
+
+.services_item_shadow {
+    text-shadow: 0 0 5px white;
+    transition: all  0.2s linear;
 }
 
 

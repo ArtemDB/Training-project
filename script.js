@@ -1,6 +1,16 @@
 "use strict";
 window.addEventListener('DOMContentLoaded', () => {
 
+    // General
+
+    function showSomeBlock(someBlock) {
+        someBlock.classList.remove('hide');
+    }
+
+    function hideSomeBlock(someBlock) {
+        someBlock.classList.add('hide');
+    }
+
     // Navigation
 
     const aboutUs = document.querySelector('.about_us'),
@@ -127,23 +137,42 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Animation
+    
 
-    headerLink.forEach (e => {
-        e.onmouseover = function(event) {
-            event.target.classList.add('active_over');
-        };
-        e.onmouseout = function(event) {
-            event.target.classList.remove('active_over');
-        };
+
+    // Services animation
+
+    const servicesItemUls = document.querySelectorAll('.services_item_ul'),
+          servicesItems = document.querySelectorAll('.services_item'),
+          allServices = document.querySelector('.all_services');
+
+
+    function hideAllUls() {
+        servicesItemUls.forEach(e =>{
+            hideSomeBlock(e);
+        });
+        servicesItems.forEach(e =>{
+            e.classList.remove ('active_services_item');
+        });
+    }
+    function addActiveUl(e) {
+        e.classList.add ('active_services_item');
+    }
+
+    hideAllUls();
+
+    allServices.addEventListener('click', (event) =>{
+        const target = event.target;
+        if (target && target.classList.contains('services_item')){
+            servicesItems.forEach((e, i) => {
+                if (target == e) {
+                    hideAllUls();
+                    addActiveUl(e);
+                    showSomeBlock(servicesItemUls[i]);
+                }
+            });
+        }
     });
-    const btn = document.querySelector('.btn');
-    btn.onmouseover = function(event) {
-        event.target.classList.add('btn_shadow');
-    };
-    btn.onmouseout = function(event) {
-        event.target.classList.remove('btn_shadow');
-    };
 
     // Reviews
 
@@ -225,4 +254,29 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Animation
+
+    const btn = document.querySelectorAll('.btn');
+
+    function mouseAnimation(e, cl) {
+        e.onmouseover = function(event) {
+            event.target.classList.add(cl);
+        };
+        e.onmouseout = function(event) {
+            event.target.classList.remove(cl);
+        };
+    }
+
+    headerLink.forEach (e => {
+        mouseAnimation(e, 'active_over');
+    });
+
+    btn.forEach (e =>{
+        mouseAnimation(e, 'btn_shadow');
+    });
+
+    servicesItems.forEach(e =>{
+        mouseAnimation(e, 'services_item_shadow');
+    });
 });
