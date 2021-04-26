@@ -25,7 +25,29 @@ body {
     background-image: url(img/background.png);
 }
 
+.content_block {
+    margin: 0 auto;
+}
 
+.content_block_title {
+    margin-right: 250px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: right;
+}
+
+.relative_block {
+    position: relative;
+    z-index: 100;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
 
 /* header */
 
@@ -275,7 +297,7 @@ body {
 
 .btn_offer {
     margin: 27px 0;
-    border-radius: 0 30% 30% 0;
+    clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
     background: linear-gradient(to top, #8A65C4 50%,#7959C0 50%);
     cursor: pointer;
 }
@@ -295,6 +317,7 @@ body {
 .timer-block {
     border-radius: 10px;
     background-color: rgba(101, 101, 229, .5);
+    box-shadow: 5px 5px 5px rgba(73, 73, 199, 0.5);
 }
 
 .timer-block span {
@@ -320,10 +343,7 @@ body {
 }
 
 .reviews_title {
-    margin-right: 250px;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: right;
+
     color: #C69C6D;
     font-size: 55px;
     text-shadow: -4px -4px 0 #693dc7;
@@ -360,3 +380,86 @@ body {
 .review_text {
     padding: 10px 70px;
 }
+
+/* Services */
+
+.services {
+    position: relative;
+    z-index: -1;
+    background: no-repeat url(img/ClipGroup.jpg);
+    background-size: cover;
+}
+
+.services_block {
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    "title title title"
+    "content content btn"
+    "content content btn";
+    margin: 0 238px;
+    background-color: rgba(13, 0, 62, 0.753);
+    backdrop-filter: blur(8px);
+    padding-bottom: 34px;
+    min-height: 100vh;
+}
+
+.services_block_title {
+    grid-area: title;
+    margin-top: 30px;
+    padding-right: 38px;
+    text-align: right;
+    font-size: 55px;
+    color: rgba(172, 165, 215, 0.8);
+    text-shadow: 2px 3px 0 rgb(89, 74, 175);
+}
+
+.services_subtitle {
+    font-size: 26px;
+}
+
+.all_services {
+    grid-area: content;
+    align-self: start;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.services_item {
+    width: 560px;
+    padding: 8px;
+    padding-left: 80px;
+}
+
+.btn_services {
+    grid-area: btn;
+    font-size: 30px;
+    text-shadow: none;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
+    background: linear-gradient(to bottom, #8A65C4 50%,#7959C0 50%);
+    text-align: center;
+}
+
+.active_services_item {
+    clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+    background-color: #C69C6D;
+}
+
+.services_circle {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #C69C6D;
+    overflow: visible;
+}
+
+.services_item_ul {
+    margin-left: 100px;
+    font-weight: 300;
+}
+
+
