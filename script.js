@@ -4,10 +4,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // General
 
     function showSomeBlock(someBlock) {
+        someBlock.classList.add('active_deploy');
         someBlock.classList.remove('hide');
     }
 
     function hideSomeBlock(someBlock) {
+        someBlock.classList.remove('active_deploy');
         someBlock.classList.add('hide');
     }
 
@@ -110,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Modal
 
-    const modalOn = document.querySelector('.btn_offer'),
+    const modalOn = document.querySelectorAll('.btn'),
           modal = document.querySelector('.modal'),
           modalOff = document.querySelector('.modal_close');
 
@@ -123,7 +125,9 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
         document.body.style.overflow= '';
     }
-    modalOn.addEventListener('click', modalShow);
+    modalOn.forEach (e => {
+        e.addEventListener('click', modalShow);
+    });
     modalOff.addEventListener('click', modalHide);
     modal.onclick = function(e) {
         const mCont = e.target.closest('.modal_content');
@@ -279,4 +283,5 @@ window.addEventListener('DOMContentLoaded', () => {
     servicesItems.forEach(e =>{
         mouseAnimation(e, 'services_item_shadow');
     });
+    
 });

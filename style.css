@@ -36,10 +36,10 @@ body {
     text-align: right;
 }
 
-.relative_block {
+/* .relative_block {
     position: relative;
     z-index: 100;
-} 
+}  */
 
 .hide {
     display: none;
@@ -85,6 +85,7 @@ body {
     justify-self: center;
     align-self: start;
     cursor: pointer;
+    transition: all 0.3s linear;
 }
 
 .active {
@@ -93,7 +94,7 @@ body {
 .active_over {
     color: #dfa96c;
     text-shadow: 0 0 10px #dd933e;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
 }
 
 
@@ -238,14 +239,42 @@ body {
 /* **************** */
 .fade {
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 @keyframes fade{
     from {
-        opacity: 0.1;
+        opacity: 0;
     }
     to {
         opacity: 1;
+    }
+}
+
+.active_deploy {
+    animation: show 0.5s;
+    animation-fill-mode: forwards;
+}
+  
+.inactive_deploy {
+    animation: hide 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+}
+  
+@keyframes hide {
+    0% {
+      transform: scaleY(1);
+    }
+    100% {
+      transform: scaleY(0);
     }
 }
 /* About us */
@@ -263,6 +292,7 @@ body {
     padding: 20px;
     font-weight: 900;
     color: white;
+    transition: all  0.3s linear;
 }
 /* Price List */
 
@@ -303,8 +333,8 @@ body {
 }
 
 .btn_shadow {
-    box-shadow: 0 0 20px #8A65C4;
-    transition: all  0.4s linear;
+    text-shadow: 0 0 3px white;
+    transition: all  0.3s linear;
 }
 
 .timer {
@@ -433,6 +463,7 @@ body {
     padding: 8px;
     padding-left: 80px;
     cursor: pointer;
+    transition: all  0.2s linear;
 }
 
 .btn_services {
@@ -441,7 +472,6 @@ body {
     justify-self: end;
     width: 290px;
     font-size: 30px;
-    text-shadow: none;
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0% 50%);
     background: linear-gradient(to bottom, #8A65C4 50%,#7959C0 50%);
     text-align: center;
@@ -471,4 +501,21 @@ body {
     transition: all  0.2s linear;
 }
 
+/* Contacts */
 
+.content_contacts {
+    margin-left: 260px;
+}
+
+.contacts_title {
+    padding-top: 20px;
+    width: 100%;
+    height: 95px;
+    text-align: left;
+    font-size: 55px;
+    color: white;
+}
+
+.map {
+    margin: 0 auto;
+}
